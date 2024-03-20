@@ -1,4 +1,4 @@
-import logo from "../images/Netflix_Symbol.png"
+import '../styles/Banner.css';
 
 const Banner = () => {
     return (
@@ -10,8 +10,8 @@ const Banner = () => {
                 Kanserden öleceğini öğrenen bir kimya öğretmeni, ailesinin geleceğini garanti altına almak için metanfetamin üretip satmak üzere eski bir öğrencisiyle kafa kafaya verir.
             </div>
             <div className="button-container">
-                <button>Oynat</button>
-                <button>Daha Fazla Bilgi</button>
+                <button> Oynat</button>
+                <button> ? Daha Fazla Bilgi</button>
             </div>
             <span className="maturity-rating">+18</span>
         </div>
