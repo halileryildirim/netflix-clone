@@ -1,26 +1,55 @@
 .billboard-container {
     background:  url("../images/breaking-bad-netflix.jpg");
     background-position: center;
-    background-size:cover;
+    /* background-attachment: fixed; */
     background-repeat: no-repeat;
-    width: 100%;
+    background-size: cover;
+    width:auto;
     height: 1200px;
     color: white;
     font-size: 1.2vw;
 
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
+    padding-left: 2%;
+    gap: 24px;
 }
 
 .billboard-logo {
     max-width: 30%;
 }
 
-.button-container button{
-    font-size: 1.6rem;
+.summary {
+    display: block;
+    max-width: 675px;
+    font-weight: 400;
 }
 
+.button-container {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.button-container button{
+    margin-right: 36px;
+    width: 150px;
+    height: 50px;
+}
+
+.play-button {
+    border: none;
+    border-radius: 4px;
+    vertical-align: middle;
+    font-size: 16px;
+}
+
+
 .maturity-rating {
-    background-color: rgba(128, 128, 128, 0.288);
+    background-color: rgba(128, 128, 128, 0.507);
+    align-self: flex-end;
+    padding: 6px 6px 6px 24px;
+    border-left: 2px solid white;
+    font-size: 1.4vw;
 }
