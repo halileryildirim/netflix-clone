@@ -39,7 +39,7 @@ const Footer = () => {
                 <li><a href="#">Gizlilik</a></li>
                 <li><a href="#">Bize Ulaşın</a></li>
             </div>
-            <button>Hizmet Kodu</button>
+            <button className="service-btn">Hizmet Kodu</button>
             <p>Copyright info</p>
         </div>
     )

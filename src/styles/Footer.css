@@ -16,7 +16,9 @@
 .footer-social-links {
     display: flex;
     flex-direction: row;
-    gap: 12px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 4px;
 }
 
 .footer a {
@@ -34,4 +36,19 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 16px;
+}
+
+.service-btn {
+    width: 90px;
+    height: 30px;
+    color: gray;
+    border: 1px solid gray;
+    background-color: transparent;
+    text-align: center;
+    font-size: 12px;
+}
+
+.service-btn:hover {
+    color: white;
+    cursor: pointer;
 }
