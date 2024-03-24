@@ -8,11 +8,11 @@ const Home = () => {
         <div className="homepage">
             <Navbar />
             <Banner />
-            <Category title={"Netflix'te Popüler"} />
-            <Category title={"Sürükleyici Diziler"} />
-            <Category title={"Yeni Çıkanlar"}/>
-            <Category title={"En Çok Arananlar"} />
-            <Category title={"Amerikan Dizileri"} />
+            <Category title={"Netflix'te Popüler"} info={{type:"movie", trend:"popular"}} />
+            <Category title={"Sürükleyici Diziler"} info={{type:"movie", trend:"top_rated"}}/>
+            <Category title={"Yeni Çıkanlar"} info={{type:"movie", trend:"upcoming"}} />
+            <Category title={"En Çok Arananlar"} info={{type:"tv", trend:"popular"}} />
+            <Category title={"Amerikan Dizileri"} info={{type:"tv", trend:"top_rated"}} />
             <Footer></Footer>
         </div>
     )

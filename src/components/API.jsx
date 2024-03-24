@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { useEffect } from "react"
 
-const API = () => {
+const API = (props) => {
     const [api, setApi] = useState([]);
-    const url = "https://api.themoviedb.org/3/movie/popular?api_key=cd48b9b030580909fcce753d6fde8a06";
+    const url = `https://api.themoviedb.org/3/${props.type}/${props.trend}?api_key=cd48b9b030580909fcce753d6fde8a06`;
     async function fetchAPI() {
         try {
             const response = await fetch(url);
@@ -18,8 +18,8 @@ const API = () => {
     useEffect(() => {
         fetchAPI();
     }, [])
-
-    return {api}
+    
+    return api;
 }
 
 export default API;
