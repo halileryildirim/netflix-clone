@@ -1,7 +1,8 @@
 .category {
     background-color: rgb(20, 20, 20);
     width: 99%;
-    height: 350px;
+    height: 400px;
+    
 }
 :root {
     --img-gap: .25rem;
@@ -27,19 +28,20 @@
 }
 
 .content-card {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
     flex: 0 0 20%;
     max-width: 20%;
     aspect-ratio: 16 / 9;
+    transition: all ease-in-out;
 }
+
 .row-poster {
     flex: 0 0 20%;
     max-width: 100%;
     aspect-ratio: 16 / 9;
-    border-radius: 1rem;
     cursor: pointer;
 }
 
@@ -49,18 +51,39 @@
     padding-left: 2%;
     width: 98%;
     height: 100%;
-    margin: -99px;
     text-align: start;
-    background-color: rgba(20, 20, 20, 0.7);
+    background-color: black;
     cursor: pointer;
+}
+
+.item-info p, .item-info h4 {
+    padding: 8px 0;
+    margin: 0;
+    text-align: start;
+}
+
+.item-info p {
+    overflow-wrap: break-word;
 }
 
 .item-info:hover {
     display: block;
+    overflow-y:auto;
 }
 
 .row-poster:hover + .item-info {
     display: block;
+}
+
+.content-card:hover {
+    transform: scale(1.2);
+    height: fit-content;
+    z-index: 13;
+}
+
+.info-buttons {
+    display: flex;
+    gap: 12px;
 }
 
 .handle {

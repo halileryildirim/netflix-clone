@@ -17,7 +17,9 @@ const Navbar = () => {
   return (
     <div className={`navbar ${show && "navbar-black"}`}>
       <div className="navbar-left">
-        <img style={{ width: "130px", height: "50px" }} src={logo} />
+        <Link to="/">
+          <img style={{ width: "130px", height: "50px" }} src={logo} />
+        </Link>
         <div className="navbar-link-list">
           <ul>
             <li>
