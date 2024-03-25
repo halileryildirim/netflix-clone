@@ -1,6 +1,7 @@
 import Banner from "./Banner";
 import Category from "./Category";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 import requests from "./requests";
 
 const Series = () => {
@@ -15,13 +16,13 @@ const Series = () => {
 
   return (
     <div className="seriesPage">
-      <Navbar></Navbar>
+      <Navbar />
       <Banner
         background={billboard.image}
         logo={billboard.logo}
         summary={billboard.summary}
         rating={billboard.rating}
-      ></Banner>
+      />
       <Category
         title={"Aksiyon Dizileri"}
         fetchUrl={requests.fetchActionSeries}
@@ -48,6 +49,7 @@ const Series = () => {
         title={"Gizem Dizileri"}
         fetchUrl={requests.fetchMysterySeries}
       />
+      <Footer></Footer>
     </div>
   );
 };
