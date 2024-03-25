@@ -13,7 +13,7 @@ const Category = ({ title, fetchUrl }) => {
   }
 
   function rightClickHandler() {
-    if (page > -400) {
+    if (page > -300) {
       setPage(page - 100);
     }
   }
@@ -35,7 +35,7 @@ const Category = ({ title, fetchUrl }) => {
   return (
     <div className="category">
       <div className="category-header">
-        <h2>{title}</h2>
+        <h1>{title}</h1>
       </div>
       <div className="row-posters">
         <button

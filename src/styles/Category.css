@@ -1,13 +1,15 @@
 .category {
     background-color: rgb(20, 20, 20);
     width: 99%;
+    height: 400px;
 }
 :root {
     --img-gap: .25rem;
 }
 
-.category h2 {
+.category h1 {
     margin: 0;
+    padding: 24px 10px;
     color: white;
 }
 
@@ -25,8 +27,8 @@
 }
 
 .row-poster {
-    flex: 0 0 25%;
-    max-width: 25%;
+    flex: 0 0 20%;
+    max-width: 20%;
     aspect-ratio: 16 / 9;
     border-radius: 1rem;
 }
