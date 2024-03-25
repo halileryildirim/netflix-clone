@@ -1,6 +1,6 @@
 import "../styles/Banner.css";
 
-const Banner = ({ image, summary, rating, background }) => {
+const Banner = ({ logo, summary, rating, background }) => {
   return (
     <div
       className="billboard-container"
@@ -12,7 +12,7 @@ const Banner = ({ image, summary, rating, background }) => {
       }}
     >
       <div className="billboard-logo">
-        <img src={image} />
+        <img src={logo} />
       </div>
       <div className="summary">{summary}</div>
       <div className="button-container">

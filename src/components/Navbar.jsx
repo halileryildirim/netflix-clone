@@ -24,13 +24,13 @@ const Navbar = () => {
               <Link to="/">Ana Sayfa</Link>
             </li>
             <li>
-              <Link to="diziler">Diziler</Link>
+              <Link to="/diziler">Diziler</Link>
             </li>
             <li>
-              <Link to="filmler">Filmler</Link>
+              <Link to="/filmler">Filmler</Link>
             </li>
             <li>
-              <Link to="listem">Listem</Link>
+              <Link to="/listem">Listem</Link>
             </li>
           </ul>
         </div>

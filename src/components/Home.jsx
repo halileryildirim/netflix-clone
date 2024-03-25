@@ -18,7 +18,7 @@ const Home = () => {
       <Navbar />
       <Banner
         background={billboard.background}
-        image={billboard.logo}
+        logo={billboard.logo}
         summary={billboard.summary}
         rating={billboard.rating}
       />
