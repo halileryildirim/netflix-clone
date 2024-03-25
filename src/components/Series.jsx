@@ -1,5 +1,7 @@
 import Banner from "./Banner";
+import Category from "./Category";
 import Navbar from "./Navbar";
+import requests from "./requests";
 
 const Series = () => {
   const billboard = {
@@ -10,6 +12,7 @@ const Series = () => {
       "Bu popüler sitcom 1990'ların Manhattanı'nda iş hayatının, aşkın ve gündelik yaşamın zorluklarıyla uğraşan 20'li yaşlardaki altı arkadaşın komik maceralarını anlatıyor.",
     rating: "13+",
   };
+
   return (
     <div className="seriesPage">
       <Navbar></Navbar>
@@ -19,6 +22,32 @@ const Series = () => {
         summary={billboard.summary}
         rating={billboard.rating}
       ></Banner>
+      <Category
+        title={"Aksiyon Dizileri"}
+        fetchUrl={requests.fetchActionSeries}
+      />
+      <Category
+        title={"Anime ve Çizgi Filmler"}
+        fetchUrl={requests.fetchAnimationSeries}
+      />
+      <Category title={"Dram Dizileri"} fetchUrl={requests.fetchDramaSeries} />
+      <Category
+        title={"Komedi Dizileri"}
+        fetchUrl={requests.fetchComedySeries}
+      />
+      <Category title={"Suç Dizileri"} fetchUrl={requests.fetchCrimeSeries} />
+      <Category
+        title={"Fantastik Diziler"}
+        fetchUrl={requests.fetchFantasySeries}
+      />
+      <Category
+        title={"Batı Yapımı Diziler"}
+        fetchUrl={requests.fetchWesternSeries}
+      />
+      <Category
+        title={"Gizem Dizileri"}
+        fetchUrl={requests.fetchMysterySeries}
+      />
     </div>
   );
 };

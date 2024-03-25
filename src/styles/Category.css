@@ -42,10 +42,8 @@
     border-radius: 1rem;
     flex-grow: 0;
     flex-shrink: 0;
-    width: 15rem;
     background-color: rgba(0,0,0,.2); 
     z-index: 10;
-    width: var(--handle-size);
     cursor: pointer;
     font-size: 5rem;
     display: flex;

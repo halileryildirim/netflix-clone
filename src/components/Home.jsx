@@ -13,6 +13,7 @@ const Home = () => {
       "Kanserden öleceğini öğrenen bir kimya öğretmeni, ailesinin geleceğini garanti altına almak için metanfetamin üretip satmak üzere eski bir öğrencisiyle kafa kafaya verir.",
     rating: "18+",
   };
+
   return (
     <div className="homepage">
       <Navbar />
