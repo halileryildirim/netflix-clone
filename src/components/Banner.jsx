@@ -1,8 +1,16 @@
 import "../styles/Banner.css";
 
-const Banner = ({ image, summary }) => {
+const Banner = ({ image, summary, rating, background }) => {
   return (
-    <div className="billboard-container">
+    <div
+      className="billboard-container"
+      style={{
+        background: `url("${background}")`,
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+      }}
+    >
       <div className="billboard-logo">
         <img src={image} />
       </div>
@@ -39,7 +47,7 @@ const Banner = ({ image, summary }) => {
           Daha Fazla Bilgi
         </button>
       </div>
-      <span className="maturity-rating">+18</span>
+      <span className="maturity-rating">{rating}</span>
     </div>
   );
 };
