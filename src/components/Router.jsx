@@ -12,5 +12,13 @@ const Router = () => {
       path: "/diziler",
       element: <Series />,
     },
+    {
+      path: "/filmler",
+      element: <Movies />,
+    },
+    {
+      path: "/listem",
+      element: <MyList />,
+    },
   ]);
 };
