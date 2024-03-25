@@ -4,6 +4,19 @@ import "../styles/Category.css";
 
 const Category = ({ title, fetchUrl }) => {
   const [content, setContent] = useState([]);
+  const [page, setPage] = useState(0);
+
+  function leftClickHandler() {
+    if (page < 0) {
+      setPage(page + 100);
+    }
+  }
+
+  function rightClickHandler() {
+    if (page > -400) {
+      setPage(page - 100);
+    }
+  }
 
   useEffect(() => {
     async function fetchData() {
@@ -21,17 +34,30 @@ const Category = ({ title, fetchUrl }) => {
 
   return (
     <div className="category">
-      <h2>{title}</h2>
+      <div className="category-header">
+        <h2>{title}</h2>
+      </div>
       <div className="row-posters">
-        {content &&
-          content.map((content) => (
-            <img
-              className="row-poster"
-              key={content.id}
-              src={`https://image.tmdb.org/t/p/w500/${content.backdrop_path}`}
-              alt={content.name}
-            ></img>
-          ))}
+        <button
+          onClick={() => leftClickHandler()}
+          className="handle left-handle"
+        >
+          <div className="text">&#8249;</div>
+        </button>
+        <div className="slider" style={{ transform: `translateX(${page}%)` }}>
+          {content &&
+            content.map((content) => (
+              <img
+                className="row-poster"
+                key={content.id}
+                src={`https://image.tmdb.org/t/p/w500/${content.backdrop_path}`}
+                alt={content.name}
+              ></img>
+            ))}
+        </div>
+        <button onClick={rightClickHandler} className="handle right-handle">
+          <div className="text">&#8250;</div>
+        </button>
       </div>
     </div>
   );
