@@ -1,6 +1,8 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "../App";
-import Home from "./Home";
+import Series from "./Series";
+import Movies from "./Movies";
+import MyList from "./MyList";
 
 const Router = () => {
   const router = createBrowserRouter([
@@ -21,4 +23,8 @@ const Router = () => {
       element: <MyList />,
     },
   ]);
+
+  return <RouterProvider router={router} />;
 };
+
+export default Router;

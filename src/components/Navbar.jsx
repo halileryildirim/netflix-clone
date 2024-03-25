@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import logo from "../images/Netflix_Logo.png";
+import { Link } from "react-router-dom";
 import "../styles/Navbar.css";
 
 const Navbar = () => {
@@ -11,10 +12,6 @@ const Navbar = () => {
         handleShow(true);
       } else handleShow(false);
     });
-
-    // return () => {
-    //   window.removeEventListener("scroll");
-    // };
   }, []);
 
   return (
@@ -24,22 +21,16 @@ const Navbar = () => {
         <div className="navbar-link-list">
           <ul>
             <li>
-              <a href="#">Ana Sayfa</a>
+              <Link to="/">Ana Sayfa</Link>
             </li>
             <li>
-              <a href="#">Diziler</a>
+              <Link to="diziler">Diziler</Link>
             </li>
             <li>
-              <a href="#">Filmler</a>
+              <Link to="filmler">Filmler</Link>
             </li>
             <li>
-              <a href="#">Listem</a>
-            </li>
-            <li>
-              <a href="#">Yeni ve Popüler</a>
-            </li>
-            <li>
-              <a href="#">Dile Göre Göz At</a>
+              <Link to="listem">Listem</Link>
             </li>
           </ul>
         </div>
