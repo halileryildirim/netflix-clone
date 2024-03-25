@@ -1,5 +1,5 @@
-const Series = () => {
-  return <h1>DİZİLER</h1>;
-};
+import Navbar from "./Navbar";
+
+const Series = () => {};
 
 export default Series;
