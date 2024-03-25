@@ -40,21 +40,27 @@
     max-width: 100%;
     aspect-ratio: 16 / 9;
     border-radius: 1rem;
+    cursor: pointer;
 }
 
 .item-info {
     color: white;
     display: none;
-    width: 91%;
-    text-align: center;
-    margin-top: -100px;
+    padding-left: 2%;
+    width: 98%;
+    height: 100%;
+    margin: -99px;
+    text-align: start;
     background-color: rgba(20, 20, 20, 0.7);
-    
+    cursor: pointer;
+}
+
+.item-info:hover {
+    display: block;
 }
 
 .row-poster:hover + .item-info {
     display: block;
-    transform: scale(1.1);  
 }
 
 .handle {
