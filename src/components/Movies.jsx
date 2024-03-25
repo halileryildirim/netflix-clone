@@ -23,6 +23,33 @@ const Movies = () => {
         summary={billboard.summary}
         rating={billboard.rating}
       />
+      <Category
+        title={"Aksiyon Filmleri"}
+        fetchUrl={requests.fetchActionMovies}
+      />
+      <Category
+        title={"Romantik Filmler"}
+        fetchUrl={requests.fetchRomanceMovies}
+      />
+      <Category
+        title={"Komedi Filmleri"}
+        fetchUrl={requests.fetchComedyMovies}
+      />
+      <Category
+        title={"Tarih Filmleri"}
+        fetchUrl={requests.fetchHistoryMovies}
+      />
+      <Category
+        title={"Korku Filmleri"}
+        fetchUrl={requests.fetchHorrorMovies}
+      />
+      <Category
+        title={"Ailecek İzlenecek Filmler"}
+        fetchUrl={requests.fetchFamilyMovies}
+      />
+      <Category title={"Müzikaller"} fetchUrl={requests.fetchMusicalMovies} />
+      <Category title={"Suç Filmleri"} fetchUrl={requests.fetchCrimeMovies} />
+      <Footer />
     </div>
   );
 };
