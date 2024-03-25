@@ -1,15 +1,30 @@
-import API from "./API";
+import axios from "./axios";
+import { useEffect, useState } from "react";
 
-const Category = ({ title, info }) => {
-    const data = API(info);
+const Category = ({ title, fetchUrl }) => {
+    const [content, setContent] = useState([]);
+
+    useEffect(() => {
+        async function fetchData() {
+            try {
+                const response = await axios.get(fetchUrl);
+                setContent(response.data.results);
+                return response;
+            } catch (error) {
+                console.log(error); 
+            }
+        }
+
+        fetchData();
+
+    }, [fetchUrl])
+
     return (
-        <div className="category-container">
-            <h1>{title}</h1>
-            <div className="content-slider">
-                {data && data.map((content) => (
-                    <img style={{maxWidth:"100px", maxHeight:"100px"}} key={content.id} src={`https://image.tmdb.org/t/p/w500/${content.backdrop_path}`} />
-                ))}
-            </div>
+        <div className="category">
+            <h2>{title}</h2>
+            {content && content.map((content) => (
+                <img key={content.id} src={`https://image.tmdb.org/t/p/w500/${content.backdrop_path}`} alt={content.name}></img>
+            ))}
         </div>
     )
 }

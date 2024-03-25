@@ -1,6 +1,7 @@
 import Navbar from "./Navbar";
 import Banner from "./Banner";
 import Category from "./Category";
+import requests from "./requests";
 import Footer from "./Footer";
 
 const Home = () => {
@@ -8,11 +9,16 @@ const Home = () => {
         <div className="homepage">
             <Navbar />
             <Banner />
-            <Category title={"Netflix'te Popüler"} info={{type:"movie", trend:"popular"}} />
-            <Category title={"Sürükleyici Diziler"} info={{type:"movie", trend:"top_rated"}}/>
-            <Category title={"Yeni Çıkanlar"} info={{type:"movie", trend:"upcoming"}} />
-            <Category title={"En Çok Arananlar"} info={{type:"tv", trend:"popular"}} />
-            <Category title={"Amerikan Dizileri"} info={{type:"tv", trend:"top_rated"}} />
+            <Category title={"Netflix'te Popüler"} fetchUrl={requests.fetchNetflixOriginals} />
+            <Category title={"Gündemdekiler"} fetchUrl={requests.fetchPopular}/>
+            <Category title={"Yeni Çıkanlar"} fetchUrl={requests.fetchTrends} />
+            <Category title={"Eleştirmenden Tam Not Alanlar"} fetchUrl={requests.fetchTopRated} />
+            <Category title={"Aksiyon Filmleri"} fetchUrl={requests.fetchActionMovies}  />
+            <Category title={"Komedi Filmleri"} fetchUrl={requests.fetchComedyMovies}  />
+            <Category title={"Korku Filmleri"} fetchUrl={requests.fetchHorrorMovies}  />
+            <Category title={"Romantik Filmler"} fetchUrl={requests.fetchRomanceMovies}  />
+            <Category title={"Belgeseller"} fetchUrl={requests.fetchDocumentaries}  />
+
             <Footer></Footer>
         </div>
     )
