@@ -5,7 +5,7 @@
 
 
 .billboard-container {
-    background:  url("../images/breaking-bad-netflix.jpg");
+    background: url("../images/breaking-bad-netflix.jpg");
     object-fit: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -20,6 +20,7 @@
     padding-left: 2%;
     gap: 24px;
     font-family: Netflix Sans;
+    margin-bottom: -100px;
 }
 
 .billboard-logo {

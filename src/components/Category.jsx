@@ -23,6 +23,7 @@ const Category = ({ title, fetchUrl }) => {
       try {
         const response = await axios.get(fetchUrl);
         setContent(response.data.results);
+        console.log(response.data.results);
         return response;
       } catch (error) {
         console.log(error);
