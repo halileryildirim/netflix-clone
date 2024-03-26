@@ -12,7 +12,7 @@ const Banner = ({ logo, summary, rating, background }) => {
       }}
     >
       <div className="billboard-logo">
-        <img src={logo} />
+        <img className="logo" src={logo} />
       </div>
       <div className="summary">{summary}</div>
       <div className="button-container">
@@ -31,7 +31,7 @@ const Banner = ({ logo, summary, rating, background }) => {
           </svg>
           Oynat
         </button>
-        <button style={{ width: "250px" }} className="info-button">
+        <button className="info-button">
           <svg
             width="24"
             height="24"
