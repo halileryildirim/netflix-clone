@@ -3,6 +3,7 @@ import App from "../App";
 import Series from "./Series";
 import Movies from "./Movies";
 import MyList from "./MyList";
+import { ListProvider } from "./ListContext";
 
 const Router = () => {
   const router = createBrowserRouter([
@@ -24,7 +25,11 @@ const Router = () => {
     },
   ]);
 
-  return <RouterProvider router={router} />;
+  return (
+    <ListProvider>
+      <RouterProvider router={router} />
+    </ListProvider>
+  );
 };
 
 export default Router;
