@@ -1,11 +1,14 @@
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import "../styles/MyList.css";
 
 const MyList = () => {
   return (
     <div className="myList">
-      <Navbar></Navbar>
+      <Navbar className="myListNavbar"></Navbar>
       <h1 className="myListHeader">Listem</h1>
+      <div className="myList-container"></div>
+      <Footer></Footer>
     </div>
   );
 };
