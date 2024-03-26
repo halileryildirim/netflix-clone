@@ -2,6 +2,8 @@ import axios from "./axios";
 import { useEffect, useState } from "react";
 import "../styles/Category.css";
 import { useList } from "./ListContext";
+import alertify from "alertifyjs";
+import "alertifyjs/build/css/alertify.css";
 
 const Category = ({ title, fetchUrl }) => {
   const [content, setContent] = useState([]);
@@ -22,7 +24,6 @@ const Category = ({ title, fetchUrl }) => {
 
   function handleFavorite(item) {
     addToList(item);
-    alert("added" + item.name);
   }
 
   useEffect(() => {

@@ -1,3 +1,4 @@
+import alertify from "alertifyjs";
 import { createContext, useContext, useState } from "react";
 
 const ListContext = createContext();
@@ -9,11 +10,12 @@ export const ListProvider = ({ children }) => {
 
   const addToList = (item) => {
     setList([...list, item]);
-    console.log(list);
+    alertify.success("İzleme listesine eklendi!");
   };
 
   const removeFromList = (itemId) => {
     setList(list.filter((item) => item.id !== itemId));
+    alertify.error("İzleme listesinden çıkarıldı!");
   };
 
   return (
