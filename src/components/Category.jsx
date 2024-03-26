@@ -87,6 +87,9 @@ const Category = ({ title, fetchUrl }) => {
                       />
                     </svg>
                     <svg
+                      onClick={() => {
+                        alertify.success("Puan Verildi!");
+                      }}
                       style={{ width: "36px", height: "36px" }}
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
