@@ -17,9 +17,24 @@ body {
     color: white;
 }
 
+.empty-list {
+    color: white;
+}
+
 .myList-container {
    min-height: 1200px;
    display: flex;
-   align-items: center;
-   justify-content: center;
+   flex-wrap: wrap;
+   align-items: flex-start;
+   justify-content: flex-start;
+   padding-left: 100px;
+}
+
+.listContainer {
+    display: flex;
+    margin: 0 var(--img-gap);
+    flex-grow: 1;
+    transition: transform 250ms ease-in-out;
+    flex-wrap: wrap;
+    gap: 24px;
 }

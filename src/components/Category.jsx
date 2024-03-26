@@ -1,10 +1,12 @@
 import axios from "./axios";
 import { useEffect, useState } from "react";
 import "../styles/Category.css";
+import { useList } from "./ListContext";
 
 const Category = ({ title, fetchUrl }) => {
   const [content, setContent] = useState([]);
   const [page, setPage] = useState(0);
+  const { addToList } = useList();
 
   function leftClickHandler() {
     if (page < 0) {
@@ -16,6 +18,11 @@ const Category = ({ title, fetchUrl }) => {
     if (page > -300) {
       setPage(page - 100);
     }
+  }
+
+  function handleFavorite(item) {
+    addToList(item);
+    alert("added" + item.name);
   }
 
   useEffect(() => {
@@ -68,6 +75,7 @@ const Category = ({ title, fetchUrl }) => {
                       />
                     </svg>
                     <svg
+                      onClick={() => handleFavorite(content)}
                       style={{ width: "36px", height: "36px" }}
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"

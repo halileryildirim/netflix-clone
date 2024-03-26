@@ -8,8 +8,8 @@ export const ListProvider = ({ children }) => {
   const [list, setList] = useState([]);
 
   const addToList = (item) => {
-    const updatedList = [...list];
-    setList(updatedList);
+    setList([...list, item]);
+    console.log(list);
   };
 
   const removeFromList = (itemId) => {
@@ -17,7 +17,7 @@ export const ListProvider = ({ children }) => {
   };
 
   return (
-    <ListContext.Provider value={(list, addToList, removeFromList)}>
+    <ListContext.Provider value={{ list, addToList, removeFromList }}>
       {children}
     </ListContext.Provider>
   );
