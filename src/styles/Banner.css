@@ -3,12 +3,12 @@
     src: url(../fonts/NetflixSans-Bold.woff2);
 }
 
-@media (max-width: 900px) {
+@media screen and (max-width: 900px) {
     .button-container button {
         font-size: 12px;
         font-weight: 100;
     }
-    
+
     .maturity-rating {
         font-size: 12px;
     }
